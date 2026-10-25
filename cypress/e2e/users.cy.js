@@ -43,4 +43,18 @@ describe("API test - Users management", () => {
 			expect(response.body).to.have.property("email");
 		});
 	});
+	it.only("Should list an user by filter", () => {
+		cy.api({
+			method: "GET",
+			url: "users",
+			headers: { Authorization: token },
+			qs: {
+				page: 1,
+				limit: 20,
+				search: "Usuário",
+			},
+		}).should((response) => {
+			expect(response.status).eq(200);
+		});
+	});
 });
