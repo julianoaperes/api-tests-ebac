@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("tokenGenerator", (email, password) => {
+	cy.api({
+		method: "POST",
+		url: "login",
+		body: {
+			email: email,
+			password: password,
+		},
+	}).then((response) => {
+		expect(response.status).equal(200);
+		return response.body.token;
+	});
+});
