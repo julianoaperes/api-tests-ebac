@@ -63,14 +63,15 @@ describe("GET: API test - Users management", () => {
 		});
 	});
 });
-describe.only("POST: API test - User management", () => {
+describe("POST: API test - User management", () => {
 	it("Should register an user successfully", () => {
+		let email = `jp${Date.now()}@email.com`;
 		cy.api({
 			method: "POST",
 			url: "users",
 			body: {
 				name: "Maria Santos",
-				email: "jp.teste3@email.com",
+				email: email,
 				password: "senha123",
 			},
 		}).should((response) => {
