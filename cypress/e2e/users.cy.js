@@ -1,14 +1,19 @@
 /// <reference types ="cypress"/>
 
-let token =
-	"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBiaWJsaW90ZWNhLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc5MzQ1MDQ3NywiZXhwIjoxNzkzNDc5Mjc3fQ.jV4gyQntcaRorErRA8_mqMT-NKSuVyoGzjezGfn5biU";
+let newToken;
+beforeEach(() => {
+	cy.tokenGenerator("admin@biblioteca.com", "admin123").then((token) => {
+		newToken = token;
+	});
+});
+
 describe("GET: API test - Users management", () => {
 	it("Should list all users successfully", () => {
 		cy.api({
 			method: "GET",
 			url: "users",
 			headers: {
-				Authorization: token,
+				Authorization: newToken,
 			},
 		}).should((response) => {
 			expect(response.status).equal(200);
@@ -20,7 +25,7 @@ describe("GET: API test - Users management", () => {
 			method: "GET",
 			url: "users",
 			headers: {
-				Authorization: token,
+				Authorization: newToken,
 			},
 		}).should((response) => {
 			expect(response.status).equal(200);
@@ -34,7 +39,7 @@ describe("GET: API test - Users management", () => {
 			method: "GET",
 			url: "users/2",
 			headers: {
-				Authorization: token,
+				Authorization: newToken,
 			},
 		}).should((response) => {
 			expect(response.status).equal(200);
@@ -47,7 +52,7 @@ describe("GET: API test - Users management", () => {
 		cy.api({
 			method: "GET",
 			url: "users",
-			headers: { Authorization: token },
+			headers: { Authorization: newToken },
 			qs: {
 				page: 1,
 				limit: 20,
@@ -58,8 +63,8 @@ describe("GET: API test - Users management", () => {
 		});
 	});
 });
-describe("POST: API test - User management", () => {
-	it("Sould register an user successfully", () => {
+describe.only("POST: API test - User management", () => {
+	it("Should register an user successfully", () => {
 		cy.api({
 			method: "POST",
 			url: "users",
@@ -73,7 +78,7 @@ describe("POST: API test - User management", () => {
 			expect(response.body.message).equal("Usuário criado com sucesso.");
 		});
 	});
-	it.only("Should validate an user registered with an invalid email", () => {
+	it("Should validate an user registered with an invalid email", () => {
 		cy.api({
 			method: "POST",
 			url: "users",
