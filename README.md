@@ -1,6 +1,6 @@
-# 📚 Hub de Leitura API - Sistema de Biblioteca para QA
+# 📚 Hub de Leitura API - Library System for QA
 
-**API educacional completa para aprendizado e prática de Quality Assurance (QA)**
+**A complete educational API for learning and practicing Quality Assurance (QA)**
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)
 ![Express](https://img.shields.io/badge/Express-4.18+-blue.svg)
@@ -8,109 +8,109 @@
 ![JWT](https://img.shields.io/badge/JWT-Auth-orange.svg)
 ![License](https://img.shields.io/badge/License-Educational-yellow.svg)
 
-## 🎯 Objetivo
+## 🎯 Purpose
 
-O **Hub de Leitura API** é uma API REST de gestão de biblioteca desenvolvida especificamente para **ensinar e praticar Quality Assurance**. Cada endpoint representa cenários reais que profissionais de QA encontram no dia a dia.
+The **Hub de Leitura API** is a REST API for library management, developed specifically for **teaching and practicing Quality Assurance**. Each endpoint represents real-world scenarios that QA professionals encounter in their daily work.
 
-### 🎓 Para Estudantes de QA
+### 🎓 For QA Students
 
-- ✅ **Aprenda testando** - API real com cenários complexos
-- ✅ **API REST completa** - Todos os tipos de endpoint
-- ✅ **Diferentes perfis** - Usuário comum vs Administrador
-- ✅ **Autenticação JWT** - Sistema de login profissional
-- ✅ **Cenários de erro** - Como APIs falham na prática
-- ✅ **Documentação Swagger** - API bem documentada
+- ✅ **Learn by testing** - A real API with complex scenarios
+- ✅ **Complete REST API** - All types of endpoints
+- ✅ **Different roles** - Regular User vs Administrator
+- ✅ **JWT authentication** - A professional login system
+- ✅ **Error scenarios** - How APIs fail in practice
+- ✅ **Swagger documentation** - A well-documented API
 
-## 🚀 Funcionalidades da API
+## 🚀 API Features
 
-### 👤 **Gestão de Usuários**
+### 👤 **User Management**
 
-- Registro e login de usuários
-- Autenticação JWT com expiração
-- Perfis diferenciados (Usuário/Admin)
-- Atualização de perfil
+- User registration and login
+- JWT authentication with expiration
+- Different roles (User/Admin)
+- Profile updates
 
-### 📖 **Catálogo de Livros**
+### 📖 **Book Catalog**
 
-- Listagem com filtros e busca
-- CRUD completo (Admin)
-- Controle de estoque
-- Upload de capas
-- Categorização
+- Listings with filters and search
+- Full CRUD operations (Admin)
+- Inventory management
+- Cover image uploads
+- Categorization
 
-### 📝 **Reservas**
+### 📝 **Reservations**
 
-- Reserva de livros disponíveis
-- Controle de prazos
-- Gestão de retiradas e devoluções
-- Histórico completo
-- Alertas de atraso
+- Reservations for available books
+- Deadline tracking
+- Pickup and return management
+- Complete history
+- Overdue alerts
 
-### 🛠️ **Administração**
+### 🛠️ **Administration**
 
-- Dashboard com estatísticas
-- Gestão de todas as reservas
-- Controle de usuários
-- Relatórios e exportações
-- Logs do sistema
+- Dashboard with statistics
+- Management of all reservations
+- User management
+- Reports and exports
+- System logs
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-- **Node.js** - Runtime JavaScript
-- **Express.js** - Framework web
-- **SQLite** - Banco de dados leve
-- **JWT** - Autenticação
-- **Bcrypt** - Criptografia de senhas
-- **Joi** - Validação de dados
-- **Swagger** - Documentação da API
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **SQLite** - Lightweight database
+- **JWT** - Authentication
+- **Bcrypt** - Password hashing
+- **Joi** - Data validation
+- **Swagger** - API documentation
 
-## ⚡ Instalação Rápida
+## ⚡ Quick Setup
 
-### Pré-requisitos
+### Prerequisites
 
-- Node.js 18+ instalado
-- Git instalado
+- Node.js 18+ installed
+- Git installed
 
-### 1. Clone o Repositório
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/EBAC-QE/hub-de-leitura-api.git
 cd hub-de-leitura-api
 ```
 
-### 2. Instale as Dependências
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Inicie o Servidor
+### 3. Start the Server
 
 ```bash
 npm start
 ```
 
-### 4. Acesse a Documentação
+### 4. Access the Documentation
 
 - **API Docs:** http://localhost:3000/api-docs
 
-## 🔑 Credenciais de Teste
+## 🔑 Test Credentials
 
-### Administrador
+### Administrator
 
 - **Email:** admin@biblioteca.com
-- **Senha:** admin123
-- **Permissões:** Acesso total ao sistema
+- **Password:** admin123
+- **Permissions:** Full system access
 
-### Usuário Comum
+### Regular User
 
 - **Email:** usuario@teste.com
-- **Senha:** user123
-- **Permissões:** Reservas e consultas
+- **Password:** user123
+- **Permissions:** Reservations and queries
 
-## 🧪 Testando a API
+## 🧪 Testing the API
 
-### Com cURL
+### With cURL
 
 ```bash
 # Login
@@ -118,107 +118,107 @@ curl -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@biblioteca.com","password":"admin123"}'
 
-# Listar livros (com token)
+# List books (with token)
 curl -X GET http://localhost:3000/api/books \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI"
+  -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
-### Com Postman/Insomnia
+### With Postman/Insomnia
 
-1. Importe a coleção do Swagger: http://localhost:3000/api-docs
-2. Configure o token JWT no cabeçalho Authorization
-3. Teste todos os endpoints disponíveis
+1. Import the Swagger collection: http://localhost:3000/api-docs
+2. Set the JWT token in the Authorization header
+3. Test all available endpoints
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-### Para Instrutores
+### For Instructors
 
-1. Fork o repositório
-2. Crie cenários de teste adicionais
-3. Adicione novos endpoints para prática
-4. Documente bugs intencionais para os alunos encontrarem
-5. Envie um Pull Request
+1. Fork the repository
+2. Create additional test scenarios
+3. Add new endpoints for practice
+4. Document intentional bugs for students to find
+5. Submit a Pull Request
 
-### Para Alunos
+### For Students
 
-1. Reporte bugs encontrados (é parte do aprendizado!)
-2. Sugira melhorias na documentação
-3. Compartilhe casos de teste interessantes
-4. Contribua com exemplos de automação
+1. Report bugs you find (it is part of learning!)
+2. Suggest documentation improvements
+3. Share interesting test cases
+4. Contribute automation examples
 
-### Resetar Banco de Dados
+### Reset the Database
 
 ```bash
-# Pare o servidor "CTRL + C" e delete o arquivo do banco
+# Stop the server with "CTRL + C" and delete the database file
 rm database/biblioteca.db
-# Rode o comando para recriar o banco
+# Run the command to recreate the database
 npm run db
-# Reinicie o servidor para recriar as tabelas
+# Restart the server to recreate the tables
 npm start
 ```
 
-## 🐛 Problemas Comuns
+## 🐛 Common Issues
 
-### Erro "Port 3000 already in use"
+### "Port 3000 already in use" Error
 
 ```bash
-# Rode numa porta diferente, por exemplo, porta 3001
+# Run on a different port, for example, port 3001
 PORT=3001 npm start
 ```
 
-### Token expirado
+### Expired Token
 
-- Faça login novamente para obter um novo token
-- Tokens expiram em 1 hora por padrão
+- Log in again to get a new token
+- Tokens expire after 1 hour by default
 
-### Banco de dados corrompido
+### Corrupted Database
 
-- Delete o arquivo `database/biblioteca.db`
-- Rode o comando `npm run db` para recriar o banco
+- Delete the `database/biblioteca.db` file
+- Run `npm run db` to recreate the database
 
-## 📚 Recursos de Aprendizado
+## 📚 Learning Resources
 
-### Documentação
+### Documentation
 
 - [Express.js](https://expressjs.com/)
 - [JWT.io](https://jwt.io/)
 - [SQLite Tutorial](https://www.sqlitetutorial.net/)
 - [Swagger/OpenAPI](https://swagger.io/docs/)
 
-### Ferramentas de Teste
+### Testing Tools
 
 - [Postman](https://www.postman.com/)
 - [Insomnia](https://insomnia.rest/)
-- [Jest](https://jestjs.io/) - Para testes automatizados
-- [Newman](https://github.com/postmanlabs/newman) - CLI do Postman
+- [Jest](https://jestjs.io/) - For automated testing
+- [Newman](https://github.com/postmanlabs/newman) - Postman's CLI
 
-### Uso Permitido
+### Permitted Use
 
-- ✅ Uso educacional e acadêmico
-- ✅ Modificação para fins didáticos
-- ✅ Distribuição para alunos
-- ✅ Criação de cursos baseados no projeto
+- ✅ Educational and academic use
+- ✅ Modification for teaching purposes
+- ✅ Distribution to students
+- ✅ Creation of courses based on the project
 
-### Uso Restrito
+### Restricted Use
 
-- ❌ Uso comercial direto
-- ❌ Venda do código
-- ❌ Redistribuição sem créditos
+- ❌ Direct commercial use
+- ❌ Sale of the code
+- ❌ Redistribution without attribution
 
 ---
 
-## ⭐ Agradecimentos
+## ⭐ Acknowledgments
 
-Desenvolvido com ❤️ para a comunidade de **Quality Assurance**.
+Developed with ❤️ for the **Quality Assurance** community.
 
-**Contribuidores:**
+**Contributors:**
 
 - Fábio Araújo
-   - [Repositório](https://github.com/fabioaraujoqa)
+   - [Repository](https://github.com/fabioaraujoqa)
    - [Linkedin](https://www.linkedin.com/in/fabio10/)
 
 ---
 
-### 🚀 **Bons Testes!**
+### 🚀 **Happy Testing!**
 
-*"A qualidade nunca é um acidente; ela é sempre o resultado de um esforço inteligente."* - John Ruskin
+*"Quality is never an accident; it is always the result of intelligent effort."* - John Ruskin
