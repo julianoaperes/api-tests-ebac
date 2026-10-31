@@ -1,4 +1,4 @@
-# 📚 Hub de Leitura API - Library System for QA
+# 📚 API Reading Hub - Library System for QA
 
 **A complete educational API for learning and practicing Quality Assurance (QA)**
 
@@ -10,7 +10,7 @@
 
 ## 🎯 Purpose
 
-The **Hub de Leitura API** is a REST API for library management, developed specifically for **teaching and practicing Quality Assurance**. Each endpoint represents real-world scenarios that QA professionals encounter in their daily work.
+The **API Reading Hub** is a REST API for library management, developed specifically for **teaching and practicing Quality Assurance**. Each endpoint represents real-world scenarios that QA professionals encounter in their daily work.
 
 ### 🎓 For QA Students
 
@@ -214,11 +214,11 @@ Developed with ❤️ for the **Quality Assurance** community.
 **Contributors:**
 
 - Fábio Araújo
-   - [Repository](https://github.com/fabioaraujoqa)
-   - [Linkedin](https://www.linkedin.com/in/fabio10/)
+  - [Repository](https://github.com/fabioaraujoqa)
+  - [Linkedin](https://www.linkedin.com/in/fabio10/)
 
 ---
 
 ### 🚀 **Happy Testing!**
 
-*"Quality is never an accident; it is always the result of intelligent effort."* - John Ruskin
+_"Quality is never an accident; it is always the result of intelligent effort."_ - John Ruskin
