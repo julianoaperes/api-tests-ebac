@@ -63,7 +63,7 @@ describe("GET: API test - Users management", () => {
 		});
 	});
 });
-describe("POST: API test - User management", () => {
+describe("POST: API test - Users management", () => {
 	it("Should register an user successfully", () => {
 		let email = `jp${Date.now()}@email.com`;
 		cy.api({
@@ -92,6 +92,31 @@ describe("POST: API test - User management", () => {
 		}).should((response) => {
 			expect(response.status).equal(400);
 			expect(response.body.message).equal("Formato de email inválido.");
+		});
+	});
+});
+describe("PUT: API test - Users Management", () => {
+	it("Should update the users information successfully", () => {
+		cy.api({
+			method: "PUT",
+			url: "users/10",
+			headers: {
+				Authorization: newToken,
+			},
+			body: {
+				name: "Juliano Peres - Alterado",
+				email: "jp.alterado.@mail.com",
+				password: "Alterado123",
+			},
+		}).should((response) => {
+			expect(response.status).equal(200);
+			expect(response.body.message).equal("Usuário atualizado com sucesso.");
+		});
+	});
+	it("Should register a new user id dynamically", () => {
+		let email = `jp${Date.now()}@email.com`;
+		cy.registerUserId("Teste Api", email, "password123").then((userId) => {
+			cy.log(userId);
 		});
 	});
 });
