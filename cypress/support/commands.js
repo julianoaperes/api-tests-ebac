@@ -37,3 +37,17 @@ Cypress.Commands.add("tokenGenerator", (email, password) => {
 		return response.body.token;
 	});
 });
+Cypress.Commands.add("registerUserId", (name, email, password) => {
+	cy.api({
+		method: "POST",
+		url: "users",
+		body: {
+			name: name,
+			email: email,
+			password: password,
+		},
+	}).then((response) => {
+		expect(response.status).equal(201);
+		return response.body.user.id;
+	});
+});
